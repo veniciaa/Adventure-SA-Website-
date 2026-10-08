@@ -1,0 +1,284 @@
+<!DOCTYPE html> <!--Tells browswer this is an HTML document-->
+<html lang="en"> <!--Tells the browser that the language of the document is English-->
+<head>
+
+    <meta charset="UTF-8"> <!--Tells browser how to interpret text-->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Tells the browser how to  display  the page on different screens  and control the page's dimensions and scaling-->
+
+    <meta name="description" content="Visit Adventure Escape SA, your premier booking destination for thrilling adventures in South Africa."> <!--Tells the browser a brief description of the page -->
+    
+    <title>Adeventure Escape SA</title> <!--Tells the browser the title of the page. Will appear on the browser tab -->
+
+    <link rel="stylesheet" href="./styling/style.css"> <!--Tells the browser to link to an external CSS file for styling the page. The href attribute specifies the path to the CSS file. -->
+
+    <link rel="icon" href="./images/logo.jpeg" type="image/jpeg"> <!--Tells the browser to use a favicon for the page. -->
+
+    <!--favicon list-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./favicon_io/site.webmanifest">
+
+</head>
+
+
+    <body>
+     
+        <header> <!--Header section of the page. This is where the navigation bar and other header elements will be placed. -->
+        
+        <nav class="navbar"> <!--Navigation bar section. This is where the navigation links will be placed. -->
+
+            <!--allows image to be shown on index page-->
+            <a class="logo" href="calculate.html">
+                <img src="images/logo.jpeg"
+                alt="Adventure Escape SA Logo"
+                width="90" height="auto">
+            </a>
+
+            <h1>Adventure Escape SA</h1> <!-- Header for the website. This is what the user will see. -->
+
+            <ul class= "nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="calculate.html">Calculate</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        
+        
+        <div class="cart">
+            <h2 class="cart-title"><i class="ri-shopping-bag-line"></i>  Your Cart</h2>
+
+            <div class="cart-content">
+                <div class="cart-box">
+
+                    <img src="images/" alt="" class="cart-img">
+
+                    <div class="cart-detail">
+                        <h2 class="cart-product-title"> Ultimate Adventure Day</h2>
+
+                        <span class="cart-price">R1,500</span>
+
+                        <div class="cart-quantity">
+
+                            <button id="decrease">-</button> <!--suntracts-->
+
+                            <span class="number">1</span>
+
+                            <button id="increase">+</button> <!--adds -->
+                        </div>
+                    </div>
+
+                    <i class="ri-delete-bin-fill cart-remove"></i>
+                </div>
+            </div>
+
+            <!--For the cart total-->
+            <div class="total">
+
+                <div class="total-title">Total</div>
+
+                <div class="total-price">0</div>
+            </div> 
+
+            <button class="btn-buy">Buy Now</button>
+
+            <i class="ri-close-large-line " id="cart"></i>
+
+        </div>
+
+
+
+        <section class="shop">
+
+             <h1 class="section-title">Products</h1> <!--title-->
+
+             <div class="product-content"> <!--ALL PRODUCTS IN THIS BOX - groups product listings-->
+
+                <!--PRODUCT 1-->
+                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+
+                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
+
+                        <img src="images/product hiking.jpg" alt="Hiking" width="200" height="300"> <!--image of the product-->
+        
+                    </div> 
+
+                    <h2 class="product-name">
+                        Ultimate Adventure Day
+                    </h2>
+
+                    <div class="price-and-cart"> 
+                        <span class="price">R 1,500</span>
+                        <i class="ri-shopping-cart-line add-cart"></i>
+                    </div>
+
+                </div> 
+
+                <!--PRODUCT 2-->
+                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+
+                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
+
+                        <img src="images/product family.jpg" alt="Picnic" width="200" height="300"> <!--image of the product-->
+        
+                    </div> 
+
+                    <h2 class="product-name">
+                        Family Explorer Packages
+                    </h2>
+
+                    <div class="price-and-cart"> 
+                        <span class="price">R 1,500</span>
+                        <i class="ri-shopping-cart-line add-cart"></i>
+                    </div>
+
+                </div> 
+
+                <!--PRODUCT 3-->
+                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+
+                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
+
+                        <img src="images/product mountain.jpg" alt="Mountain" width="200" height="300"> <!--image of the product-->
+        
+                    </div> 
+
+                    <h2 class="product-name">
+                        Mountain Adventure
+                    </h2>
+
+                    <div class="price-and-cart"> 
+                        <span class="price">R 1,500</span>
+                        <i class="ri-shopping-cart-line add-cart"></i>
+                    </div>
+
+                </div>
+                
+                <!--PRODUCT 4-->
+                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+
+                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
+
+                        <img src="images/product team.jpg" alt="Team" width="200" height="300"> <!--image of the product-->
+        
+                    </div> 
+
+                    <h2 class="product-name">
+                        Corporate Team Challenge
+                    </h2>
+
+                    <div class="price-and-cart"> 
+                        <span class="price">R 1,500</span>
+                        <i class="ri-shopping-cart-line add-cart"></i>
+                    </div>
+
+                </div>
+                
+                <!--PRODUCT 5--><!--INDIVIDUAL ACTIVITIES-->
+                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+
+                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
+
+                        <img src="images/product ziplining.jpg" alt="ziplining" width="200" height="300"> <!--image of the product-->
+        
+                    </div> 
+
+                    <h2 class="product-name">
+                        Ziplining Adventure
+                    </h2>
+
+                    <div class="price-and-cart"> 
+                        <span class="price">R 750</span>
+                        <i class="ri-shopping-cart-line add-cart"></i>
+                    </div>
+
+                </div>
+                
+                <!--PRODUCT 6-->
+                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+
+                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
+
+                        <img src="images/product kayaking.jpg" alt="kayaking" width="200" height="300"> <!--image of the product-->
+        
+                    </div> 
+
+                    <h2 class="product-name">
+                        Kayaking Experience
+                    </h2>
+
+                    <div class="price-and-cart"> 
+                        <span class="price">R 750</span>
+                        <i class="ri-shopping-cart-line add-cart"></i>
+                    </div>
+
+                </div>
+                
+                <!--PRODUCT 7-->
+                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+
+                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
+
+                        <img src="images/product rock climbing.jpg" alt="rock climbing" width="200" height="300"> <!--image of the product-->
+        
+                    </div> 
+
+                    <h2 class="product-name">
+                        Rock Climbing Session
+                    </h2>
+
+                    <div class="price-and-cart"> 
+                        <span class="price">R 750</span>
+                        <i class="ri-shopping-cart-line add-cart"></i>
+                    </div>
+
+                </div> 
+             
+            </div> 
+             
+
+        </section>
+
+
+    </main>
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-container">
+            
+            <div class="footer-bottom">
+
+                <p>© 2024 - 2026 Adventure Escape SA. Adventures Await! All Rights Reserved.</p> <!--year of org creation as well as org name-->
+
+            </div>
+
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="booking.html">Book Now</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                
+                </ul>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
