@@ -1,0 +1,789 @@
+html 
+{
+    scroll-behavior: smooth;
+    height: 100%; /* Ensures the element takes the full height of viewport */
+}
+
+body 
+{
+    display: flex;
+    flex-direction: column; /* Ensures the footer is pushed to the bottom of the page */
+    min-height: 100vh; /* Ensures the body takes at least the full viewport height */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.jpg'); /* Add the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Keep the background image fixed during scrolling */ 
+    background-size: cover; /* Ensure the image covers the entire background */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+   
+}
+
+/*Typography*/
+/*Header styles*/
+h1, h2, h3
+{
+    font-family: cursive, sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+h1 
+{
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+h2 
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+h3 
+{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0.5rem 0 0 0;
+}
+
+p 
+{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: black;
+    margin: 0.5rem 0 0.5rem 1rem;
+    padding: 0;
+}
+
+/*Header and navigation bar */
+header 
+{
+    position:sticky;
+    top:0;
+    padding: 1rem 0;
+    z-index: 1000; /* Ensures the header stays on top of other elements */
+}
+
+.navbar 
+{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    max-width: 1100px; 
+    height: 4.5rem; /* Adjusted height for better visibility */
+    margin: 0 auto; /* Centers the navbar horizontally */
+    padding: 0 1rem 0 26px; /* Adjusted padding to create space on the left side */
+    background: rgba(85, 107, 47, 0.2);
+    backdrop-filter: blur(10px); /* Adds a blur effect to the navbar background */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Adds a border to the navbar */
+    border-style: outset; /* Ensures the border is solid */
+    border-radius: 50px; /* Adds rounded corners to the navbar */
+    box-shadow: 0 4px 6px black; /* Adds a subtle shadow effect to the navbar */
+}
+
+.navbar h1 
+{
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links 
+{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.nav-links li 
+{
+    margin: 0;
+}
+
+/* Links inside the navigation bar */
+.nav-links a 
+{
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+.nav-links a:hover 
+{
+    background-color: #9fd87a;
+    color: #000000;
+}
+
+/*Logo styles*/
+.logo
+{
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    width: 50px; /* Adjust the width of the logo */
+    height: 50px; /* Adjust the height of the logo */
+    border: 2px solid #ffffff; /* Adds a border around the logo */
+    border-radius: 50%; 
+    background-color: #ffffff; /* Sets a background color for the logo */
+    overflow: hidden; /* Ensures the logo image fits within the circular shape */
+}
+
+.logo img 
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Prevents squishing or stretching */
+}
+
+/*Links*/
+a 
+{
+    color: #333;
+    text-decoration: none;
+    
+}
+
+a:visited 
+{
+    color: #000000;
+}
+
+a:hover 
+{
+    color: #a0ca76;
+}
+
+a:active 
+{
+    color: #109c91;
+}
+
+main 
+{
+    flex: 1; /* Pushes footer out into empty space below */
+    display: flex;
+    flex-direction: column; /*makes text boxes stack on top of eachother*/
+    gap: 2rem; /* Space between text boxes */
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+
+/*Text Box Styles*/
+/* Service pages' adventure offerings styling as well*/
+.text-box 
+{   
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(30, 63, 7, 0.55); 
+    padding: 2.5rem;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.text-box h1 
+{
+    font-size: 3rem;
+    color: #fdfcfc;
+    margin-bottom: 1rem;
+}
+.text-box p 
+{
+    font-size: 1.2rem;
+    color: #e4e3e3;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+.text-box p ul 
+{
+    font-size: 1.2rem;
+    color: #e4e3e3;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+
+
+/*Button styles*/
+
+
+.btn-container 
+{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Space between buttons */
+    margin-top: 2.5rem; /* Space above the button container */
+    flex-wrap: wrap; 
+}
+
+.btn-container button 
+{
+    background-color: transparent; /* Button background color */
+    color: #fffbfb; /* Button text color */
+    border: 2px solid #ffffff; /* Button border */
+    padding: 0.8rem 2.2rem; /* Button padding */
+    font-size: 1rem; /* Button font size */
+    font-weight: bold; /* Button font weight */
+    border-radius: 30px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-container button:hover
+{
+    background-color: #80c535;
+    color: #000000;
+}
+
+/*ABOUT PAGE*/
+.text-about 
+{   
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(88, 105, 85, 0.55); 
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.text-about h1 
+{
+    font-size: 3rem;
+    color: #eeeded;
+    margin-bottom: 1rem;
+}
+
+.text-about p 
+{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+
+/*mission section*/
+.text-mission 
+{ 
+    background: rgba(96, 121, 21, 0.685);
+    width: 95%;
+    max-width: 1100px;
+    padding: 2.5rem;
+    margin: 0 auto;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(117, 113, 113, 0.3);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.text-mission h1 
+{
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.text-mission p 
+{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+
+/*Vision section*/
+.text-vision 
+{ 
+    background: rgba(39, 59, 2, 0.55);
+    width: 95%;
+    max-width: 1000px;
+    padding: 2.5rem;
+    margin: 0 auto;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(65, 63, 63, 0.3);
+    backdrop-filter: blur(8px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.text-vision h1 
+{
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.text-vision p 
+{
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+
+/*Services section*/
+.text-services
+{ 
+    background: rgba(39, 59, 2, 0.55);
+    width: 100%;
+    max-width: 1500px;
+    padding: 2.5rem;
+    margin: 0 auto;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(65, 63, 63, 0.3);
+    backdrop-filter: blur(40px);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.text-services h1 
+{
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+.text-services p 
+{
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+.text-services p u 
+{
+    font-size: 2rem;
+    color: #080808;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+
+.service-card 
+{
+    background: rgba(155, 43, 43, 0.1); /* Semi-transparent white background */
+    border: 1px solid rgba(255, 254, 254, 0.2); 
+    border-radius: 15px; /* Rounded corners */
+    padding: 1.5rem; /* Padding inside the card */
+    margin: 3rem; /* Margin around the card */
+    box-shadow: 0 4px 8px rgba(226, 214, 214, 0.2); /* Subtle shadow for depth */
+    text-align: center; /* Center the text inside the card */
+}
+
+.service-card h2 
+{
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+.service-card ul 
+{
+    color: #ffffff;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+.service-card:hover 
+{
+    transform: translateY(-10px); /* Slightly lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.price 
+{
+    font-size: 2.5rem;
+    color: #020202;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+    text-decoration: bold;
+}
+
+.booking 
+{
+    background-color: #b8720af1; 
+    color: #020202;/* White text */
+    padding: 2rem; 
+    margin: 2rem auto;  
+    border-radius: 20px; /* Rounded corners */
+    width: 90%; 
+    max-width: 1600px; 
+}
+.booking h1 
+{
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.booking p 
+{
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 0 0 1.5rem 0;
+    text-align: center;
+}
+
+.packages 
+{
+    font-size: 1.5rem;
+    color: #020202; /* White text */
+    padding: 2rem; /* Padding inside the booking section */
+    margin: 2rem auto; /* Center the booking section with some margin */   
+    width: 50%;
+    max-width: 1600px; /* Limit the width of the booking section */
+    background: rgba(58, 82, 4, 0.55);
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 32px rgba(65, 63, 63, 0.3);
+    backdrop-filter: blur(40px);
+    
+}
+
+.packages h1 
+{
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.packages h2 
+{
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.packages p ul
+{
+    font-size: 1.5rem;
+    color: #000000;
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+}
+
+/*BOOKING PAGE STYLING*/
+form 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.name 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+}
+
+.input 
+{
+    height: 2rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.email 
+{
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+}
+
+.submit
+{
+    background-color: transparent; /* Button background color */
+    width: 100%; /* Button width */
+    color: #fffbfb; /* Button text color */
+    border: 2px solid #ffffff; /* Button border */
+    padding: 0.8rem 2.2rem; /* Button padding */
+    font-size: 1rem; /* Button font size */
+    font-weight: bold; /* Button font weight */
+    border-radius: 30px; /* Rounded corners for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.submit:hover
+{
+    background-color: #352206;
+}
+
+/*CONTACT PAGE STYLING*/
+form 
+{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: left;
+    max-width: 500px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+.message 
+{
+    display: flex;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+/*GALLERY PAGE*/
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allows image cards to spill to new rows */
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.gallery-card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    width: 300px; 
+    padding: 0.8rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-card .description
+{
+    padding: 12px;
+    text-align: center;
+    color: #fcfbfb;
+    font-size: 1.5rem;
+}
+
+.gallery-card:hover
+{
+    border: 10px solid rgba(204, 218, 15, 0.726);
+    transform: translateY(-10px); /* Slightly lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+.gallery-card img
+{
+width: 100%; /*100% of the width of our gallery so it will be 200px*/
+height: auto;
+}
+
+/*FOOTER STYLING*/
+.footer 
+{
+    background-color: #556B2F;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 2rem;
+    margin-top: auto; /* Adds space above the footer */
+    width: 100%; /* Ensures the footer spans the full width of the page */
+    box-sizing: border-box;
+}
+
+.footer-container 
+{
+    display: flex;
+    justify-content: space-between; /* Pushes copyright left, menu links right */
+    align-items: center; 
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.footer-links ul
+{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0;
+    gap: 1.5rem;
+}
+
+.footer-links a:hover
+{
+    color: #9fd87a;
+    text-decoration: underline;
+}
+
+
+/*Media Queries for Responsive Design*/
+/* 🌍 Tablet View*/
+@media (max-width: 850px) 
+{
+    .navbar h1 
+    {
+        font-size: 1.3rem;
+        letter-spacing: 0;
+    }
+    
+    .nav-links a 
+    {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.95rem;
+    }
+    
+    .text-box h1 
+    {
+        font-size: 2.3rem;
+    }
+}
+
+
+/* 📱 Mobile Phone View */
+@media (max-width: 650px) {
+
+    header 
+    {
+        padding: 0.5rem 0;
+    }
+
+    .navbar 
+    {
+        height: auto;
+        flex-direction: column; 
+        padding: 1rem;
+        border-radius: 20px;
+        gap: 0.8rem;
+    }
+
+    .navbar h1 
+    {
+        text-align: center;
+        font-size: 1.4rem;
+        padding-bottom: 0.2rem;
+    }
+
+    .nav-links 
+    {
+        justify-content: center;
+        flex-wrap: wrap; /* Allows menu links to wrap neatly to a second line if they run out of room */
+        gap: 0.3rem 0.8rem;
+    }
+
+    .nav-links a 
+    {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .text-box 
+    {
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: 16px;
+    }
+
+    .text-box h1 
+    {
+        font-size: 1.8rem; 
+    }
+
+    .text-box p 
+    {
+        font-size: 1rem; 
+        line-height: 1.5;
+    }
+
+    .btn-container 
+    {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        max-width: 280px; 
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .btn-container button 
+    {
+        width: 100%; /* width makes buttons easier to tap */
+        padding: 0.7rem 1.5rem;
+    }
+
+    .footer-container 
+    {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer-bottom p 
+    {
+        text-align: center;
+    }
+
+    .footer-links ul 
+    {
+        justify-content: center;
+        flex-wrap: wrap; /* Allows links to break into two lines nicely on small screens */
+        gap: 0.5rem 1rem;
+    }
+}
+
+/*
+REFERENCING 
+
+Bro Code (2024) How to include a CSS background image[Online video]. Available at: https://youtu.be/_oFWg_NlKdo?si=jBeFx-gripyCZW45 (Accessed: 5 October 2026).
+
+freeCodeCamp.org (2021) Build a Simple Website with HTML, CSS, JavaScript – Course for Beginners [Online video]. Available at: https://www.youtube.com/watch?v=krfUjg0S2uI (Accessed: 20 September 2026).
+
+CSSnippets (2025) Learn how to use CSS Media Queries in 5 Minutes[Online video]. Available at: https://www.youtube.com/watch?v=Q8meex0f3c8 (Accessed: 23 September 2026).
+
+Easy Tutorials (2021) How To Make Website Using HTML & CSS | Full Responsive Multi Page Website Design Step by Step[Online video]. Available at: https://youtu.be/oYRda7UtuhA?si=w4pZtsWB8iqd2VNQ (Accessed: 22 September 2026).
+
+Bro Code (2023) Learn HTML favicons in 2 minutes![Online video]. Available at: https://youtu.be/8iXHciqlAdA?si=irCVSLKbP1_gmSwz (Accessed: 1 October 2026)
+
+Bro Code (2023) How to create a CSS image gallery in 5 minutes![Online video]. Available at: https://youtu.be/uu0lOX6Ot3s?si=qUccz-LK9IrkrFQf (Accessed: 8 October 2026).
+
+Coding2GO (2024) Learn CSS Flexbox in 20 Minutes (Course)[Online video]. 4 January. Available at: https://youtu.be/wsTv9y931o8?si=u5cZ2YZ-CnTmExZj (Accessed: 29 September 2026).
+
+W3Schools (2026) HTML & CSS Landing Page Project. Available at: https://www.w3schools.com/htmlcss/htmlcss_project_landing_page.asp (Accessed: 20 September 2026)
+
+
+*/
