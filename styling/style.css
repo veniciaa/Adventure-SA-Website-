@@ -151,9 +151,9 @@ header {
     transition: all 0.3s ease;     /* Smooth transition for the hover effect */
 }
 
-/* Invert the colours when the user hovers over it */
+
 .mobile-book .btn-primary:hover {
-    background-color: #ffffff ;     /* Fills the button on hover */
+    background-color: #ffffff ;     /* Fills the button once you hover over it */
     color:#ff5722;                /* Changes text to white for readability */
 }
 
@@ -800,9 +800,28 @@ height: auto;
     box-sizing: border-box; 
 }
 
+.btn-buy 
+{
+    background-color: #ff5722; 
+    color: #fffbfb; 
+    border: 2px solid #ff5722;; 
+    padding: 0.8rem 2.2rem; 
+    font-size: 1rem; 
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+.btn-buy:hover {
+    background-color: #ffffff ;     /* Fills the button once you hover over it */
+    color:#ff5722;                /* Changes text to white for readability */
+}
+
 
 /*Media Queries for Responsive Design*/
-/* 🌍 Tablet View*/
+/*Tablet View*/
 @media (max-width: 850px) 
 {
     .navbar h1 
