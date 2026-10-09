@@ -65,95 +65,150 @@ p
     padding: 0;
 }
 
-/*Header and navigation bar */
-header 
-{
-    position:sticky;
-    top:0;
+/* Header and navigation bar */
+header {
+    position: sticky;
+    top: 0;
     padding: 1rem 0;
-    z-index: 1000; /* Ensures the header stays on top of other elements */
+    z-index: 1000;
 }
 
-.navbar 
-{
-    display: flex; 
-    justify-content: space-between; 
+/* Main navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     list-style: none;
     width: 100%;
-    max-width: 1100px; 
-    height: 4.5rem; /* Adjusted height for better visibility */
-    margin: 0 auto; /* Centers the navbar horizontally */
-    padding: 0 1rem 0 26px; /* Adjusted padding to create space on the left side */
-    background: rgba(85, 107, 47, 0.2);
-    backdrop-filter: blur(10px); /* Adds a blur effect to the navbar background */
-    border: 1px solid rgba(255, 255, 255, 0.2); /* Adds a border to the navbar */
-    border-style: outset; /* Ensures the border is solid */
-    border-radius: 50px; /* Adds rounded corners to the navbar */
-    box-shadow: 0 4px 6px black; /* Adds a subtle shadow effect to the navbar */
+    box-sizing: border-box;
+    color: #46504A;
+    max-width: 1100px;
+
+    /* Allow navbar height to adjust to its content */
+    min-height: 4.5rem;
+    height: auto;
+
+    margin: 0 auto;
+    padding: 10px 1rem 10px 26px;
+
+    background: #FFFFFF;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-style: outset;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px black;
+
+    /* Prevent content from overflowing */
+    gap: 1rem;
 }
 
-.navbar h1 
-{
+/* Navbar heading */
+.navbar h1 {
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #ffffff; 
+    color: #46504A;
     margin: 0;
     padding: 0;
 }
 
-.nav-links 
-{
+/* Navigation links */
+.nav-links {
     display: flex;
     list-style: none;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     gap: 1rem;
 }
 
-.nav-links li 
-{
+.nav-links li {
     margin: 0;
 }
 
 /* Links inside the navigation bar */
-.nav-links a 
-{
-    color: #ffffff;
+.nav-links a {
+    display: inline-block;
+    color: #46504A;
     padding: 0.5rem 1rem;
     font-weight: bold;
     font-size: 1rem;
     border-radius: 20px;
+    text-decoration: none;
 }
 
-.nav-links a:hover 
-{
+.nav-links a:hover {
     background-color: #9fd87a;
     color: #000000;
 }
-
-/*Logo styles*/
-.logo
-{
-    display: flex;
-    align-items: center; 
-    text-align: center;
-    width: 50px; /* Adjust the width of the logo */
-    height: 50px; /* Adjust the height of the logo */
-    border: 2px solid #ffffff; /* Adds a border around the logo */
-    border-radius: 50%; 
-    background-color: #ffffff; /* Sets a background color for the logo */
-    overflow: hidden; /* Ensures the logo image fits within the circular shape */
+/* Style the CTA link directly to use the border */
+.mobile-book .btn-primary {
+    background-color: #ff5722; 
+    border: 2px solid #ff5722;     
+    color: #ffffff;             
+    font-weight: bold;
+    transition: all 0.3s ease;     /* Smooth transition for the hover effect */
 }
 
-.logo img 
-{
+/* Invert the colours when the user hovers over it */
+.mobile-book .btn-primary:hover {
+    background-color: #ffffff ;     /* Fills the button on hover */
+    color:#ff5722;                /* Changes text to white for readability */
+}
+
+/* Logo container */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Logo can grow without overflowing the navbar */
+    width: 120px;
+    height: 120px;
+    min-width: 200px;
+    flex-shrink: 0;
+
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+/* Logo image */
+.logo img {
+    display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Prevents squishing or stretching */
+    object-fit: contain;
+    border-radius: 50%;
 }
+
+/* Responsive navbar for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        width: calc(100% - 2rem);
+        padding: 10px 16px;
+        border-radius: 25px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+    }
+
+    .nav-links {
+        gap: 0.25rem;
+    }
+
+    .nav-links a {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
 
 /*Links*/
 a 
