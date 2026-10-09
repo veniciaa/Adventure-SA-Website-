@@ -802,8 +802,8 @@ height: auto;
 
 .btn-buy 
 {
-    background-color: #ff5722; 
-    color: #fffbfb; 
+    background-color: #fff; 
+    color: #ff5722; 
     border: 2px solid #ff5722;; 
     padding: 0.8rem 2.2rem; 
     font-size: 1rem; 
@@ -815,8 +815,8 @@ height: auto;
 
 
 .btn-buy:hover {
-    background-color: #ffffff ;     /* Fills the button once you hover over it */
-    color:#ff5722;                /* Changes text to white for readability */
+    background-color: #ff5722 ;     /* Fills the button once you hover over it */
+    color:#fff;                /* Changes text to white for readability */
 }
 
 
@@ -843,7 +843,7 @@ height: auto;
 }
 
 
-/* 📱 Mobile Phone View */
+/*  Mobile Phone View */
 @media (max-width: 650px) {
 
     header 
@@ -870,7 +870,7 @@ height: auto;
     .nav-links 
     {
         justify-content: center;
-        flex-wrap: wrap; /* Allows menu links to wrap neatly to a second line if they run out of room */
+        flex-wrap: wrap; 
         gap: 0.3rem 0.8rem;
     }
 
