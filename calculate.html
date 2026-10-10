@@ -20,6 +20,10 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="manifest" href="./favicon_io/site.webmanifest">
 
+    <!-- Remix Icon library -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+        rel="stylesheet"> <!--this is sections of code used for the shoping icons and the delet icons-->
+
 </head>
 
 
@@ -29,22 +33,22 @@
         
         <nav class="navbar"> <!--Navigation bar section. This is where the navigation links will be placed. -->
 
-            <!--allows image to be shown on index page-->
-            <a class="logo" href="index.html">
+            
+            <a class="logo" href="calculate.html">
                 <img src="images/logo.jpeg"
                 alt="Adventure Escape SA Logo">
             </a>
 
 
             <ul class= "nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="booking.html">Booking</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="index.html">Home</a></li> <!--links to index page-->
+                <li><a href="about.html">About</a></li> <!--links to about page-->
+                <li><a href="contact.html">Contact</a></li> <!--links to contact page-->
+                <li><a href="services.html">Services</a></li> <!--links to services page-->
+                <li><a href="calculate.html">Cart</a></li> <!--links to calculate page-->
+                <li><a href="gallery.html">Gallery</a></li> <!--links to gallery page-->
                 <li class="mobile-book">
-                    <a href="booking.html" class="btn btn-primary">
+                    <a href="booking.html" class="btn btn-primary"> <!--links to booking page using a button tag-->
                         Book an Adventure
                     </a>
                 </li>
@@ -58,203 +62,310 @@
 
     <main>
 
-        
-        
-        <div class="cart">
-            <h2 class="cart-title"><i class="ri-shopping-bag-line"></i>  Your Cart</h2>
+        <!-- SHOPPING CART -->
+        <section class="cart" id="cart">
 
+            <h2 class="cart-title">
+                <i class="ri-shopping-bag-line"></i>
+                Your Cart
+            </h2>
+
+            <!-- Cart content -->
             <div class="cart-content">
+
+                <!-- CART ITEM -->
                 <div class="cart-box">
 
-                    <img src="images/" alt="" class="cart-img">
+                    <img src="images/product hiking.jpg"
+                        al="Ultimate Adventure Day"
+                        class="cart-img" width=" 200">
 
-                    <div class="cart-detail">
-                        <h2 class="cart-product-title"> Ultimate Adventure Day</h2>
+                        <br>
 
-                        <span class="cart-price">R1,500</span>
+                        <span class="cart-price">R1,500.00</span>
 
+                        <!-- Quantity buttons -->
                         <div class="cart-quantity">
-
-                            <button id="decrease">-</button> <!--suntracts-->
-
+                            <br>
+                            <button type="button" id="decrease">-</button>
+                            
                             <span class="number">1</span>
 
-                            <button id="increase">+</button> <!--adds -->
-                        </div>
-                    </div>
+                            <button type="button" id="increase">+</button>
 
+                        </div>
+
+                    </div>
+                    
+                    <br>
+                    <!-- Remove item icon -->
                     <i class="ri-delete-bin-fill cart-remove"></i>
+
                 </div>
+
             </div>
 
-            <!--For the cart total-->
-            <div class="total">
 
-                <div class="total-title">Total</div>
+            <!-- CART CALCULATIONS -->
+            <div class="cart-summary">
 
-                <div class="total-price">0</div>
-            </div> 
+                <h3>Order Summary</h3>
 
-            <button class="btn-buy">Buy Now</button>
+                <p>
+                    <span>Subtotal:</span>
+                    <span id="subtotal">R0.00</span>
+                </p>
 
-            <i class="ri-close-large-line " id="cart"></i>
+                <p>
+                    <span>Number of packages:</span>
+                    <span id="package-count">0</span>
+                </p>
 
-        </div>
+                <p>
+                    <span>Discount:</span>
+                    <span id="discount">0%</span>
+                </p>
+
+                <p>
+                    <span>Money saved:</span>
+                    <span id="discount-amount">R0.00</span>
+                </p>
+
+                <h3 class="final-total">
+                    <span>Final Total:</span>
+                    <span id="final-total">R0.00</span>
+                </h3>
+
+            </div>
 
 
+            <!-- BUY BUTTON -->
+            <button type="button" class="btn-buy">
+                Buy Now
+            </button>
 
+        </section>
+
+
+        <!-- DISCOUNT INFORMATION -->
+        <section class="discount-section">
+
+            <h2 class="section-title">Package Discounts</h2>
+
+            <p>
+                Book more adventure packages and enjoy a discount!
+            </p>
+
+            <div class="discount-container">
+
+                <div class="discount-box">
+                    <h3>1 booking</h3>
+                    <p>0% Discount(Standard Rate)</p>
+                </div>
+
+                <div class="discount-box">
+                    <h3>2 bookings</h3>
+                    <p>5% Discount</p>
+                </div>
+
+                <div class="discount-box">
+                    <h3>3 bookings</h3>
+                    <p>10% Discount</p>
+                </div>
+
+                <div class="discount-box">
+                    <h3>4 or more bookings</h3>
+                    <p>15% Discount</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AVAILABLE PRODUCTS -->
         <section class="shop">
 
-             <h1 class="section-title">Products</h1> <!--title-->
+            <h1 class="section-title">Our Adventure Packages</h1>
 
-             <div class="product-content"> <!--ALL PRODUCTS IN THIS BOX - groups product listings-->
+            <div class="product-content">
 
-                <!--PRODUCT 1-->
-                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+                <!-- PRODUCT 1 -->
+                <div class="product-box">
 
-                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
-
-                        <img src="images/product hiking.jpg" alt="Hiking" width="200" height="300"> <!--image of the product-->
-        
-                    </div> 
+                    <div class="img-box">
+                        <img src="images/product hiking.jpg"
+                            alt="Hiking adventure"
+                            width="200"
+                            height="300">
+                    </div>
 
                     <h2 class="product-name">
                         Ultimate Adventure Day
                     </h2>
 
-                    <div class="price-and-cart"> 
-                        <span class="price">R 1,500</span>
+                    <div class="price-and-cart">
+
+                        <span class="price">R1,500.00</span>
+
                         <i class="ri-shopping-cart-line add-cart"></i>
+
                     </div>
 
-                </div> 
+                </div>
 
-                <!--PRODUCT 2-->
-                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+                <!-- PRODUCT 2 -->
+                <div class="product-box">
 
-                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
-
-                        <img src="images/product family.jpg" alt="Picnic" width="200" height="300"> <!--image of the product-->
-        
-                    </div> 
+                    <div class="img-box">
+                        <img src="images/product family.jpg"
+                            alt="Family adventure package"
+                            width="200"
+                            height="300">
+                    </div>
 
                     <h2 class="product-name">
                         Family Explorer Packages
                     </h2>
 
-                    <div class="price-and-cart"> 
-                        <span class="price">R 1,500</span>
+                    <div class="price-and-cart">
+
+                        <span class="price">R1,500.00</span>
+
                         <i class="ri-shopping-cart-line add-cart"></i>
+
                     </div>
 
-                </div> 
+                </div>
 
-                <!--PRODUCT 3-->
-                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
+                <!-- PRODUCT 3 -->
+                <div class="product-box">
 
-                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
-
-                        <img src="images/product mountain.jpg" alt="Mountain" width="200" height="300"> <!--image of the product-->
-        
-                    </div> 
+                    <div class="img-box">
+                        <img src="images/product mountain.jpg"
+                            alt="Mountain adventure"
+                            width="200"
+                            height="300">
+                    </div>
 
                     <h2 class="product-name">
                         Mountain Adventure
                     </h2>
 
-                    <div class="price-and-cart"> 
-                        <span class="price">R 1,500</span>
+                    <div class="price-and-cart">
+
+                        <span class="price">R1,500.00</span>
+
                         <i class="ri-shopping-cart-line add-cart"></i>
+
                     </div>
 
                 </div>
-                
-                <!--PRODUCT 4-->
-                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
 
-                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
 
-                        <img src="images/product team.jpg" alt="Team" width="200" height="300"> <!--image of the product-->
-        
-                    </div> 
+                <!-- PRODUCT 4 -->
+                <div class="product-box">
+
+                    <div class="img-box">
+                        <img src="images/product team.jpg"
+                            alt="Corporate team challenge"
+                            width="200"
+                            height="300">
+                    </div>
 
                     <h2 class="product-name">
                         Corporate Team Challenge
                     </h2>
 
-                    <div class="price-and-cart"> 
-                        <span class="price">R 1,500</span>
+                    <div class="price-and-cart">
+
+                        <span class="price">R1,500.00</span>
+
                         <i class="ri-shopping-cart-line add-cart"></i>
+
                     </div>
 
                 </div>
-                
-                <!--PRODUCT 5--><!--INDIVIDUAL ACTIVITIES-->
-                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
 
-                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
 
-                        <img src="images/product ziplining.jpg" alt="ziplining" width="200" height="300"> <!--image of the product-->
-        
-                    </div> 
+                <!-- PRODUCT 5 -->
+                <div class="product-box">
+
+                    <div class="img-box">
+                        <img src="images/product ziplining.jpg"
+                            alt="Ziplining adventure"
+                            width="200"
+                            height="300">
+                    </div>
 
                     <h2 class="product-name">
                         Ziplining Adventure
                     </h2>
 
-                    <div class="price-and-cart"> 
-                        <span class="price">R 750</span>
+                    <div class="price-and-cart">
+
+                        <span class="price">R750.00</span>
+
                         <i class="ri-shopping-cart-line add-cart"></i>
+
                     </div>
 
                 </div>
-                
-                <!--PRODUCT 6-->
-                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
 
-                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
 
-                        <img src="images/product kayaking.jpg" alt="kayaking" width="200" height="300"> <!--image of the product-->
-        
-                    </div> 
+                <!-- PRODUCT 6 -->
+                <div class="product-box">
+
+                    <div class="img-box">
+                        <img src="images/product kayaking.jpg"
+                            alt="Kayaking experience"
+                            width="200"
+                            height="300">
+                    </div>
 
                     <h2 class="product-name">
                         Kayaking Experience
                     </h2>
 
-                    <div class="price-and-cart"> 
-                        <span class="price">R 750</span>
+                    <div class="price-and-cart">
+
+                        <span class="price">R750.00</span>
+
                         <i class="ri-shopping-cart-line add-cart"></i>
+
                     </div>
 
                 </div>
-                
-                <!--PRODUCT 7-->
-                <div class="product-box"><!-- ONE PRODUCT IN THIS BOX WITH ITS INFO - each product is placed here -->
 
-                    <div class="img-box"><!--ONE IMAGE OF THE PRODUCT IN THIS BOX - imagge box holding the image elements-->
 
-                        <img src="images/product rock climbing.jpg" alt="rock climbing" width="200" height="300"> <!--image of the product-->
-        
-                    </div> 
+                <!-- PRODUCT 7 -->
+                <div class="product-box">
+
+                    <div class="img-box">
+                        <img src="images/product rock climbing.jpg"
+                            alt="Rock climbing session"
+                            width="200"
+                            height="300">
+                    </div>
 
                     <h2 class="product-name">
                         Rock Climbing Session
                     </h2>
 
-                    <div class="price-and-cart"> 
-                        <span class="price">R 750</span>
+                    <div class="price-and-cart">
+
+                        <span class="price">R750.00</span>
+
                         <i class="ri-shopping-cart-line add-cart"></i>
+
                     </div>
 
-                </div> 
-             
-            </div> 
-             
+                </div>
+
+            </div>
 
         </section>
-
-
+    
     </main>
 
     <!-- Footer -->
